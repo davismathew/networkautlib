@@ -1,0 +1,43 @@
+2016-11-07 11:51:15,623 INFO Login to 10.10.10.70 router 
+2016-11-07 11:51:21,937 INFO sh ip bgp vpnv4 all | in 172.16.10.1 Command output *>i172.16.10.10/32  10.10.10.14              0    100      0 ?
+ 
+2016-11-07 11:51:21,938 INFO IP Present in vrf routing Table. Searched IP 172.16.10.1 command output *>i172.16.10.10/32  10.10.10.14              0    100      0 ?
+
+2016-11-07 12:17:32,940 INFO Login to 10.10.10.70 router 
+2016-11-07 12:17:39,253 INFO sh ip bgp vpnv4 all | in 172.16.10.1 Command output *>i172.16.10.10/32  10.10.10.14              0    100      0 ?
+ 
+2016-11-07 12:17:39,253 INFO IP Present in vrf routing Table. Searched IP 172.16.10.1 command output *>i172.16.10.10/32  10.10.10.14              0    100      0 ?
+
+2016-11-07 12:19:57,897 INFO Login to 10.10.10.70 router 
+2016-11-07 12:20:04,211 INFO sh ip bgp vpnv4 all | in 172.16.10.1 Command output *>i172.16.10.10/32  10.10.10.14              0    100      0 ?
+ 
+2016-11-07 12:20:04,211 INFO IP Present in vrf routing Table. Searched IP 172.16.10.1 command output *>i172.16.10.10/32  10.10.10.14              0    100      0 ?
+
+2016-11-07 12:21:16,149 INFO Login to 10.10.10.70 router 
+2016-11-07 12:21:22,463 INFO sh ip bgp vpnv4 all | in 212.21.51.236 Command output  
+2016-11-07 12:21:23,566 INFO sh ip route 212.21.51.236 Command output Routing entry for 212.21.51.236/31
+  Known via "isis", distance 115, metric 46, type level-2
+  Redistributing via isis
+  Last update from 212.21.50.250 on GigabitEthernet3/1, 4d04h ago
+  Routing Descriptor Blocks:
+  * 212.21.50.250, from 10.10.10.71, 4d04h ago, via GigabitEthernet3/1
+      Route metric is 46, traffic share count is 1
+ 
+2016-11-07 12:21:23,566 INFO IP Present in routing Table. Searched IP 212.21.51.236 command output Routing entry for 212.21.51.236/31
+  Known via "isis", distance 115, metric 46, type level-2
+  Redistributing via isis
+  Last update from 212.21.50.250 on GigabitEthernet3/1, 4d04h ago
+  Routing Descriptor Blocks:
+  * 212.21.50.250, from 10.10.10.71, 4d04h ago, via GigabitEthernet3/1
+      Route metric is 46, traffic share count is 1
+
+2016-11-07 12:34:08,606 INFO Login to 10.10.10.70 router 
+2016-11-07 12:34:14,920 INFO sh ip bgp vpnv4 all | in 172.16.10.1 Command output *>i172.16.10.10/32  10.10.10.14              0    100      0 ?
+ 
+2016-11-07 12:34:14,921 INFO IP Present in vrf routing Table. Searched IP 172.16.10.1 command output *>i172.16.10.10/32  10.10.10.14              0    100      0 ?
+
+2016-11-08 04:48:53,639 INFO Login to 10.10.10.70 router 
+2016-11-08 04:48:59,952 INFO sh ip bgp vpnv4 all | in 172.16.10.1 Command output *>i172.16.10.10/32  10.10.10.14              0    100      0 ?
+ 
+2016-11-08 04:48:59,953 INFO IP Present in vrf routing Table. Searched IP 172.16.10.1 command output *>i172.16.10.10/32  10.10.10.14              0    100      0 ?
+

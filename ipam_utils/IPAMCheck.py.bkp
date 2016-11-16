@@ -1,0 +1,120 @@
+#! /usr/bin/env python
+
+#*--------------------------------------------------------------
+#* SourceRouterCheck.py
+#*
+#*--------------------------------------------------------------
+#*@author:Gowdhaman Mohan
+
+import os.path
+import sys
+file_path = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), os.path.pardir))
+if file_path not in sys.path:
+    sys.path.insert(0, file_path) 
+import cling
+import re
+from log import log
+
+class IPAMCheck:
+    
+        def __init__(self):
+            self.username,self.password="madhan.endla","Srirama2498!"
+            #self.hostName=sourceIP
+	    
+	def intializeLoggerModule(self,fileName,name):
+	    log(fileName,name)      
+	    
+        def connect(self,hostName):
+            try:
+		log.info("Login to %s router ",str(hostName))
+                routerHanlder=cling.Cling(hostname=hostName,username=self.username,password=self.password,personality='ios',max_login_attempts=3,pexpect_timeout=200,pexpect_read_loop_timeout=0.5)
+                routerHanlder.login()
+                return routerHanlder
+            except Exception as e:
+                if "Authentication" in str(e):
+                    msg="Error.Authentication failed"
+                    log.warning('Authentication error. %s',str(e))
+                elif "timed-out" in str(e):
+                    msg="Erro.Connection timed out error"
+                    log.warning('Connection timed out error. %s',str(e))
+                elif "refused" in str(e):
+                    msg="Error.Connection refused error"
+                    log.warning('Connection refused  error. %s',str(e))
+                else:    
+                    msg='Error.Connecting to router '+hostName+' got failed. Error msg '+str(e)
+                    log.warning('Connecting to router got error. %s',str(e))
+                return msg
+        
+        def runCommand(self,routerHandler,command,hostName):
+	    output=""
+            try:
+                output=routerHandler.run_command(command)
+		log.info("%s Command output %s ",str(command),str(output))
+                return output
+            except Exception as e:
+                if "closed" in str(e):
+                    log.warning('Connection got closed. Error msg %s',str(e))
+                    routerHandler=self.connect(hostName)
+		    if "Error" in str(routerHandler):
+			log.warning('Connection got closed.So skipping source roter operation')
+			return "Errorrun"
+                    self.runCommand(routerHandler,command,hostName)
+                else:
+                    for i in range(0,3):
+                        try:
+                            output=routerHandler.run_command(command)
+                            return output
+                        except Exception as e:
+			    if "closed" in str(e):
+				log.warning('Connection got closed. Error msg %s',str(e))
+				routerHandler=self.connect(hostName)
+				if "Error" in str(routerHandler):
+				    log.warning('Connection got closed.So skipping source router finding operations')
+				    return "Errorrun"	
+				
+                               
+                log.warning("Exception occured while executing %s command on %s router . Error message %s",str(command),str(hostName),str(e))
+                return "Errorrun"
+		    
+        def checkIPAMIP(self,hostname,sourceIPs):
+	    try:
+	            rHandler=self.connect(hostname)
+		    if "Error" in str(rHandler):
+			log.warning('Connection got failed')
+		    else:
+			command='sh ip bgp vpnv4 all | in '+str(sourceIPs)    
+			output=self.runCommand(rHandler,command,hostname)
+			if output:
+			    if "Errorrun" in str(output):
+				log.warning(" %s Command execution got failed on router",str(command))
+				return "Error"
+			    else:
+				log.info('IP Present in vrf routing Table. Searched IP %s command output %s',str(sourceIPs),str(output))
+				return sourceIPs+" present on VRF Table" 	
+			else:
+			    command='sh ip route '+str(sourceIPs)
+			    output=self.runCommand(rHandler,command,hostname)
+			    if output:
+				if "Errorrun" in str(output):
+					log.warning(" %s Command execution got failed on router",str(command))
+					return "Error"	
+				else:    
+					log.info('IP Present in routing Table. Searched IP %s command output %s',str(sourceIPs),str(output))
+					return sourceIPs+" present on Global Routing Table "
+			    else:
+				return sourceIPs+" is free"
+	    except Exception as e:
+		log.warning("Exception occured %s ",str(e))
+		    	        
+
+if __name__ == "__main__":
+    object=IPAMCheck()
+    object.intializeLoggerModule('IPAMIPCeck.log','IPCheck')
+    returnIP=object.checkIPAMIP('10.10.10.70','172.16.10.1')  
+    if "Free".strip() in str(returnIP).strip():
+	print "172.16.10.1 ip is Free"
+    elif "Error" in str(returnIP).strip():
+	print "Error in process.please check logger file for more details"
+    else:	
+	print "172.16.10.1 ip is  present in Routing Table"
+    print returnIP
