@@ -60,21 +60,32 @@ class tracePath:
 	if self.nodeNamePath:
 	    return self.nodeNamePath
 	else:
-	    nodeName,ippath=self.getPath(filename)
+	    nodeName,ippath=self.getPath(self.readAnsibleOutput(filename))
 	    return nodeName
 	
     def getIPPath(self,filename):
 	if self.ipPath:
 	    return self.ipPath
 	else:
-	    nodeName,ippath=self.getPath(filename)
-	    return ippath	    
+	    nodeName,ippath=self.getPath(self.readAnsibleOutput(filename))
+	    return ippath
+	   
+    def getNodeDetails(self,cmdoutput,node):
+        if self.ipPath:
+            return self.ipPath
+        else:
+            nodeName,ippath=self.getPath(cmdoutput)
+	    if node:
+	    	return nodeName
+	    else:
+            	return ippath
+ 
     """
       This method takes parsed JSON output and fetch NodeNames for all IPAddress and returns list of paths between first to end hopnum
     """
-    def getPath(self,filename):
+    def getPath(self,output):
 	try:
-	    out=self.readAnsibleOutput(filename)
+	    out=output
 	    traceRoutePath=OrderedDict()
 	    i=0
 	    list1=[]
@@ -148,17 +159,23 @@ class tracePath:
 if __name__ == "__main__":
     
     tPath=tracePath('ops.emc-corp.net','svcorionnet@emc-corp.net','$V(0r!0N3t')
-    iPath=tPath.getNodeNamePath("8.json")
-    rPath=tPath.getIPPath("8.json")
+#    iPath=tPath.getNodeNamePath("8.json")
+#    rPath=tPath.getIPPath("8.json")
+    newlist= []
+    newlist=[{'hopnum': '1', 'ipaddress': '212.21.40.74'}, {'hopnum': '2', 'ipaddress': '212.21.51.7'}]
+    newpath = tPath.getNodeDetails(newlist,False)
     #print iPath
     print "\n"
     print "\n"
-    for path in iPath:
-	print path 
-	print "\n"
-    for path in rPath:
-	print "\n"
-	print path
+    for path in newpath:
+       print path 
+       print "\n"
+#    for path in iPath:
+#	print path 
+#	print "\n"
+#    for path in rPath:
+#	print "\n"
+#	print path
 	
     
 
