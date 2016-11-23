@@ -1,0 +1,624 @@
+2016-11-20 09:23:56,860 INFO Login to 10.10.10.70 router 
+2016-11-20 09:24:01,217 INFO sh version Command output Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Sat 02-Oct-10 16:28 by prod_rel_team
+
+ROM: System Bootstrap, Version 12.2(33r)SRD5, RELEASE SOFTWARE (fc1)
+BOOTLDR: Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+
+ EMC_CORE_RAI_7606_1 uptime is 2 years, 17 weeks, 4 days, 18 hours, 31 minutes
+Uptime for this control processor is 2 years, 17 weeks, 4 days, 18 hours, 14 minutes
+System returned to ROM by reload (SP by reload)
+System restarted at 19:53:00 UTC Sun Jul 20 2014
+System image file is "sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin"
+Last reload type: Normal Reload
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO7606-S (M8500) processor (revision 1.1) with 3670016K/262144K bytes of memory.
+Processor board ID FOX1449GPSB
+ BASEBOARD: RSP720
+ CPU: MPC8548_E, Version: 2.1, (0x80390021)
+ CORE: E500, Version: 2.2, (0x80210022)
+ CPU:1200MHz, CCB:400MHz, DDR:200MHz,
+ L1:    D-cache 32 kB enabled
+        I-cache 32 kB enabled
+
+Last reset from power-on
+2 Virtual Ethernet interfaces
+124 Gigabit Ethernet interfaces
+3964K bytes of non-volatile configuration memory.
+
+507024K bytes of Internal ATA PCMCIA card (Sector size 512 bytes).
+Configuration register is 0x2102
+
+ 
+2016-11-20 09:24:01,217 INFO  Template File Name cisco_ios_show_version.template . Output to be parse Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Sat 02-Oct-10 16:28 by prod_rel_team
+
+ROM: System Bootstrap, Version 12.2(33r)SRD5, RELEASE SOFTWARE (fc1)
+BOOTLDR: Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+
+ EMC_CORE_RAI_7606_1 uptime is 2 years, 17 weeks, 4 days, 18 hours, 31 minutes
+Uptime for this control processor is 2 years, 17 weeks, 4 days, 18 hours, 14 minutes
+System returned to ROM by reload (SP by reload)
+System restarted at 19:53:00 UTC Sun Jul 20 2014
+System image file is "sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin"
+Last reload type: Normal Reload
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO7606-S (M8500) processor (revision 1.1) with 3670016K/262144K bytes of memory.
+Processor board ID FOX1449GPSB
+ BASEBOARD: RSP720
+ CPU: MPC8548_E, Version: 2.1, (0x80390021)
+ CORE: E500, Version: 2.2, (0x80210022)
+ CPU:1200MHz, CCB:400MHz, DDR:200MHz,
+ L1:    D-cache 32 kB enabled
+        I-cache 32 kB enabled
+
+Last reset from power-on
+2 Virtual Ethernet interfaces
+124 Gigabit Ethernet interfaces
+3964K bytes of non-volatile configuration memory.
+
+507024K bytes of Internal ATA PCMCIA card (Sector size 512 bytes).
+Configuration register is 0x2102
+
+
+2016-11-20 09:24:01,221 INFO Template Output [['CISCO7606-S', '3670016K/262144K', '0x2102', '12.2(33)SRD5', 'reload (SP by reload)', '19:53:00 UTC Sun Jul 20 2014', 'sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin', 'EMC_CORE_RAI_7606_1', '2 years, 17 weeks, 4 days, 18 hours, 31 minutes', 'FOX1449GPSB']] 
+2016-11-20 09:24:01,221 INFO Template Parsing Done
+2016-11-20 09:32:30,817 INFO Login to 10.10.10.70 router 
+2016-11-20 09:32:35,127 INFO sh version Command output Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Sat 02-Oct-10 16:28 by prod_rel_team
+
+ROM: System Bootstrap, Version 12.2(33r)SRD5, RELEASE SOFTWARE (fc1)
+BOOTLDR: Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+
+ EMC_CORE_RAI_7606_1 uptime is 2 years, 17 weeks, 4 days, 18 hours, 39 minutes
+Uptime for this control processor is 2 years, 17 weeks, 4 days, 18 hours, 23 minutes
+System returned to ROM by reload (SP by reload)
+System restarted at 19:53:00 UTC Sun Jul 20 2014
+System image file is "sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin"
+Last reload type: Normal Reload
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO7606-S (M8500) processor (revision 1.1) with 3670016K/262144K bytes of memory.
+Processor board ID FOX1449GPSB
+ BASEBOARD: RSP720
+ CPU: MPC8548_E, Version: 2.1, (0x80390021)
+ CORE: E500, Version: 2.2, (0x80210022)
+ CPU:1200MHz, CCB:400MHz, DDR:200MHz,
+ L1:    D-cache 32 kB enabled
+        I-cache 32 kB enabled
+
+Last reset from power-on
+2 Virtual Ethernet interfaces
+124 Gigabit Ethernet interfaces
+3964K bytes of non-volatile configuration memory.
+
+507024K bytes of Internal ATA PCMCIA card (Sector size 512 bytes).
+Configuration register is 0x2102
+
+ 
+2016-11-20 09:32:35,127 INFO  Template File Name cisco_ios_show_version.template . Output to be parse Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Sat 02-Oct-10 16:28 by prod_rel_team
+
+ROM: System Bootstrap, Version 12.2(33r)SRD5, RELEASE SOFTWARE (fc1)
+BOOTLDR: Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+
+ EMC_CORE_RAI_7606_1 uptime is 2 years, 17 weeks, 4 days, 18 hours, 39 minutes
+Uptime for this control processor is 2 years, 17 weeks, 4 days, 18 hours, 23 minutes
+System returned to ROM by reload (SP by reload)
+System restarted at 19:53:00 UTC Sun Jul 20 2014
+System image file is "sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin"
+Last reload type: Normal Reload
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO7606-S (M8500) processor (revision 1.1) with 3670016K/262144K bytes of memory.
+Processor board ID FOX1449GPSB
+ BASEBOARD: RSP720
+ CPU: MPC8548_E, Version: 2.1, (0x80390021)
+ CORE: E500, Version: 2.2, (0x80210022)
+ CPU:1200MHz, CCB:400MHz, DDR:200MHz,
+ L1:    D-cache 32 kB enabled
+        I-cache 32 kB enabled
+
+Last reset from power-on
+2 Virtual Ethernet interfaces
+124 Gigabit Ethernet interfaces
+3964K bytes of non-volatile configuration memory.
+
+507024K bytes of Internal ATA PCMCIA card (Sector size 512 bytes).
+Configuration register is 0x2102
+
+
+2016-11-20 09:32:35,131 INFO Template Output [['CISCO7606-S', '3670016K/262144K', '0x2102', '12.2(33)SRD5', 'reload (SP by reload)', '19:53:00 UTC Sun Jul 20 2014', 'sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin', 'EMC_CORE_RAI_7606_1', '2 years, 17 weeks, 4 days, 18 hours, 39 minutes', 'FOX1449GPSB']] 
+2016-11-20 09:32:35,131 INFO Template Parsing Done
+2016-11-20 09:33:12,209 INFO Login to 10.10.10.70 router 
+2016-11-20 09:33:16,519 INFO sh version Command output Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Sat 02-Oct-10 16:28 by prod_rel_team
+
+ROM: System Bootstrap, Version 12.2(33r)SRD5, RELEASE SOFTWARE (fc1)
+BOOTLDR: Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+
+ EMC_CORE_RAI_7606_1 uptime is 2 years, 17 weeks, 4 days, 18 hours, 40 minutes
+Uptime for this control processor is 2 years, 17 weeks, 4 days, 18 hours, 24 minutes
+System returned to ROM by reload (SP by reload)
+System restarted at 19:53:00 UTC Sun Jul 20 2014
+System image file is "sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin"
+Last reload type: Normal Reload
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO7606-S (M8500) processor (revision 1.1) with 3670016K/262144K bytes of memory.
+Processor board ID FOX1449GPSB
+ BASEBOARD: RSP720
+ CPU: MPC8548_E, Version: 2.1, (0x80390021)
+ CORE: E500, Version: 2.2, (0x80210022)
+ CPU:1200MHz, CCB:400MHz, DDR:200MHz,
+ L1:    D-cache 32 kB enabled
+        I-cache 32 kB enabled
+
+Last reset from power-on
+2 Virtual Ethernet interfaces
+124 Gigabit Ethernet interfaces
+3964K bytes of non-volatile configuration memory.
+
+507024K bytes of Internal ATA PCMCIA card (Sector size 512 bytes).
+Configuration register is 0x2102
+
+ 
+2016-11-20 09:33:16,519 INFO  Template File Name cisco_ios_show_version.template . Output to be parse Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Sat 02-Oct-10 16:28 by prod_rel_team
+
+ROM: System Bootstrap, Version 12.2(33r)SRD5, RELEASE SOFTWARE (fc1)
+BOOTLDR: Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+
+ EMC_CORE_RAI_7606_1 uptime is 2 years, 17 weeks, 4 days, 18 hours, 40 minutes
+Uptime for this control processor is 2 years, 17 weeks, 4 days, 18 hours, 24 minutes
+System returned to ROM by reload (SP by reload)
+System restarted at 19:53:00 UTC Sun Jul 20 2014
+System image file is "sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin"
+Last reload type: Normal Reload
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO7606-S (M8500) processor (revision 1.1) with 3670016K/262144K bytes of memory.
+Processor board ID FOX1449GPSB
+ BASEBOARD: RSP720
+ CPU: MPC8548_E, Version: 2.1, (0x80390021)
+ CORE: E500, Version: 2.2, (0x80210022)
+ CPU:1200MHz, CCB:400MHz, DDR:200MHz,
+ L1:    D-cache 32 kB enabled
+        I-cache 32 kB enabled
+
+Last reset from power-on
+2 Virtual Ethernet interfaces
+124 Gigabit Ethernet interfaces
+3964K bytes of non-volatile configuration memory.
+
+507024K bytes of Internal ATA PCMCIA card (Sector size 512 bytes).
+Configuration register is 0x2102
+
+
+2016-11-20 09:33:16,523 INFO Template Output [['CISCO7606-S', '3670016K/262144K', '0x2102', '12.2(33)SRD5', 'reload (SP by reload)', '19:53:00 UTC Sun Jul 20 2014', 'sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin', 'EMC_CORE_RAI_7606_1', '2 years, 17 weeks, 4 days, 18 hours, 40 minutes', 'FOX1449GPSB']] 
+2016-11-20 09:33:16,523 INFO Template Parsing Done
+2016-11-20 09:33:16,523 INFO [['CISCO7606-S', '3670016K/262144K', '0x2102', '12.2(33)SRD5', 'reload (SP by reload)', '19:53:00 UTC Sun Jul 20 2014', 'sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin', 'EMC_CORE_RAI_7606_1', '2 years, 17 weeks, 4 days, 18 hours, 40 minutes', 'FOX1449GPSB']]
+2016-11-20 11:29:57,407 INFO Login to 10.10.10.70 router 
+2016-11-20 11:30:01,716 INFO sh version Command output Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Sat 02-Oct-10 16:28 by prod_rel_team
+
+ROM: System Bootstrap, Version 12.2(33r)SRD5, RELEASE SOFTWARE (fc1)
+BOOTLDR: Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+
+ EMC_CORE_RAI_7606_1 uptime is 2 years, 17 weeks, 4 days, 20 hours, 37 minutes
+Uptime for this control processor is 2 years, 17 weeks, 4 days, 20 hours, 21 minutes
+System returned to ROM by reload (SP by reload)
+System restarted at 19:53:00 UTC Sun Jul 20 2014
+System image file is "sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin"
+Last reload type: Normal Reload
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO7606-S (M8500) processor (revision 1.1) with 3670016K/262144K bytes of memory.
+Processor board ID FOX1449GPSB
+ BASEBOARD: RSP720
+ CPU: MPC8548_E, Version: 2.1, (0x80390021)
+ CORE: E500, Version: 2.2, (0x80210022)
+ CPU:1200MHz, CCB:400MHz, DDR:200MHz,
+ L1:    D-cache 32 kB enabled
+        I-cache 32 kB enabled
+
+Last reset from power-on
+2 Virtual Ethernet interfaces
+124 Gigabit Ethernet interfaces
+3964K bytes of non-volatile configuration memory.
+
+507024K bytes of Internal ATA PCMCIA card (Sector size 512 bytes).
+Configuration register is 0x2102
+
+ 
+2016-11-20 11:30:01,717 WARNING Parsing Template Got failed.Error msg global name 'commands' is not defined
+2016-11-20 11:30:01,717 WARNING Template ErrorTemplate Parsing Failed parsing got failed 
+2016-11-20 11:52:26,119 INFO Login to 10.10.10.70 router 
+2016-11-20 11:52:30,429 INFO sh version Command output Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Sat 02-Oct-10 16:28 by prod_rel_team
+
+ROM: System Bootstrap, Version 12.2(33r)SRD5, RELEASE SOFTWARE (fc1)
+BOOTLDR: Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+
+ EMC_CORE_RAI_7606_1 uptime is 2 years, 17 weeks, 4 days, 20 hours, 59 minutes
+Uptime for this control processor is 2 years, 17 weeks, 4 days, 20 hours, 43 minutes
+System returned to ROM by reload (SP by reload)
+System restarted at 19:53:00 UTC Sun Jul 20 2014
+System image file is "sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin"
+Last reload type: Normal Reload
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO7606-S (M8500) processor (revision 1.1) with 3670016K/262144K bytes of memory.
+Processor board ID FOX1449GPSB
+ BASEBOARD: RSP720
+ CPU: MPC8548_E, Version: 2.1, (0x80390021)
+ CORE: E500, Version: 2.2, (0x80210022)
+ CPU:1200MHz, CCB:400MHz, DDR:200MHz,
+ L1:    D-cache 32 kB enabled
+        I-cache 32 kB enabled
+
+Last reset from power-on
+2 Virtual Ethernet interfaces
+124 Gigabit Ethernet interfaces
+3964K bytes of non-volatile configuration memory.
+
+507024K bytes of Internal ATA PCMCIA card (Sector size 512 bytes).
+Configuration register is 0x2102
+
+ 
+2016-11-20 11:52:30,429 WARNING Parsing Template Got failed.Error msg global name 'parseoutput' is not defined
+2016-11-20 11:52:30,429 WARNING Template ErrorTemplate Parsing Failed parsing got failed 
+2016-11-20 11:56:56,014 INFO Login to 10.10.10.70 router 
+2016-11-20 11:57:00,324 INFO sh version Command output Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Sat 02-Oct-10 16:28 by prod_rel_team
+
+ROM: System Bootstrap, Version 12.2(33r)SRD5, RELEASE SOFTWARE (fc1)
+BOOTLDR: Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+
+ EMC_CORE_RAI_7606_1 uptime is 2 years, 17 weeks, 4 days, 21 hours, 4 minutes
+Uptime for this control processor is 2 years, 17 weeks, 4 days, 20 hours, 47 minutes
+System returned to ROM by reload (SP by reload)
+System restarted at 19:53:00 UTC Sun Jul 20 2014
+System image file is "sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin"
+Last reload type: Normal Reload
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO7606-S (M8500) processor (revision 1.1) with 3670016K/262144K bytes of memory.
+Processor board ID FOX1449GPSB
+ BASEBOARD: RSP720
+ CPU: MPC8548_E, Version: 2.1, (0x80390021)
+ CORE: E500, Version: 2.2, (0x80210022)
+ CPU:1200MHz, CCB:400MHz, DDR:200MHz,
+ L1:    D-cache 32 kB enabled
+        I-cache 32 kB enabled
+
+Last reset from power-on
+2 Virtual Ethernet interfaces
+124 Gigabit Ethernet interfaces
+3964K bytes of non-volatile configuration memory.
+
+507024K bytes of Internal ATA PCMCIA card (Sector size 512 bytes).
+Configuration register is 0x2102
+
+ 
+2016-11-20 11:57:00,343 INFO Template Parsing Done
+2016-11-20 11:57:00,343 INFO [{'uptime': '2 years, 17 weeks, 4 days, 21 hours, 4 minutes', 'configregister': '0x2102', 'reloadtime': '19:53:00 UTC Sun Jul 20 2014', 'hostname': 'EMC_CORE_RAI_7606_1', 'imagefile': 'sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin', 'version': '12.2(33)SRD5', 'memory': '3670016K/262144K', 'model': 'CISCO7606-S', 'serial': 'FOX1449GPSB', 'reloadreason': 'reload (SP by reload)'}]
+2016-11-20 12:41:40,130 INFO Login to 10.10.10.70 router 
+2016-11-20 12:41:44,439 INFO sh version Command output Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Sat 02-Oct-10 16:28 by prod_rel_team
+
+ROM: System Bootstrap, Version 12.2(33r)SRD5, RELEASE SOFTWARE (fc1)
+BOOTLDR: Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+
+ EMC_CORE_RAI_7606_1 uptime is 2 years, 17 weeks, 4 days, 21 hours, 48 minutes
+Uptime for this control processor is 2 years, 17 weeks, 4 days, 21 hours, 32 minutes
+System returned to ROM by reload (SP by reload)
+System restarted at 19:53:00 UTC Sun Jul 20 2014
+System image file is "sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin"
+Last reload type: Normal Reload
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO7606-S (M8500) processor (revision 1.1) with 3670016K/262144K bytes of memory.
+Processor board ID FOX1449GPSB
+ BASEBOARD: RSP720
+ CPU: MPC8548_E, Version: 2.1, (0x80390021)
+ CORE: E500, Version: 2.2, (0x80210022)
+ CPU:1200MHz, CCB:400MHz, DDR:200MHz,
+ L1:    D-cache 32 kB enabled
+        I-cache 32 kB enabled
+
+Last reset from power-on
+2 Virtual Ethernet interfaces
+124 Gigabit Ethernet interfaces
+3964K bytes of non-volatile configuration memory.
+
+507024K bytes of Internal ATA PCMCIA card (Sector size 512 bytes).
+Configuration register is 0x2102
+
+ 
+2016-11-20 12:41:44,459 INFO Template Parsing Done
+2016-11-20 12:41:44,459 INFO [{'uptime': '2 years, 17 weeks, 4 days, 21 hours, 48 minutes', 'configregister': '0x2102', 'reloadtime': '19:53:00 UTC Sun Jul 20 2014', 'hostname': 'EMC_CORE_RAI_7606_1', 'imagefile': 'sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin', 'version': '12.2(33)SRD5', 'memory': '3670016K/262144K', 'model': 'CISCO7606-S', 'serial': 'FOX1449GPSB', 'reloadreason': 'reload (SP by reload)'}]
+2016-11-20 12:43:01,306 INFO Login to 10.10.10.70 router 
+2016-11-20 12:43:06,117 INFO sh version Command output Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Sat 02-Oct-10 16:28 by prod_rel_team
+
+ROM: System Bootstrap, Version 12.2(33r)SRD5, RELEASE SOFTWARE (fc1)
+BOOTLDR: Cisco IOS Software, c7600rsp72043_rp Software (c7600rsp72043_rp-ADVENTERPRISEK9-M), Version 12.2(33)SRD5, RELEASE SOFTWARE (fc2)
+
+ EMC_CORE_RAI_7606_1 uptime is 2 years, 17 weeks, 4 days, 21 hours, 50 minutes
+Uptime for this control processor is 2 years, 17 weeks, 4 days, 21 hours, 34 minutes
+System returned to ROM by reload (SP by reload)
+System restarted at 19:53:00 UTC Sun Jul 20 2014
+System image file is "sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin"
+Last reload type: Normal Reload
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO7606-S (M8500) processor (revision 1.1) with 3670016K/262144K bytes of memory.
+Processor board ID FOX1449GPSB
+ BASEBOARD: RSP720
+ CPU: MPC8548_E, Version: 2.1, (0x80390021)
+ CORE: E500, Version: 2.2, (0x80210022)
+ CPU:1200MHz, CCB:400MHz, DDR:200MHz,
+ L1:    D-cache 32 kB enabled
+        I-cache 32 kB enabled
+
+Last reset from power-on
+2 Virtual Ethernet interfaces
+124 Gigabit Ethernet interfaces
+3964K bytes of non-volatile configuration memory.
+
+507024K bytes of Internal ATA PCMCIA card (Sector size 512 bytes).
+Configuration register is 0x2102
+
+ 
+2016-11-20 12:43:06,136 INFO Template Parsing Done
+2016-11-20 12:43:06,136 INFO [{'uptime': '2 years, 17 weeks, 4 days, 21 hours, 50 minutes', 'configregister': '0x2102', 'reloadtime': '19:53:00 UTC Sun Jul 20 2014', 'hostname': 'EMC_CORE_RAI_7606_1', 'imagefile': 'sup-bootdisk:c7600rsp72043-adventerprisek9-mz.122-33.SRD5.bin', 'version': '12.2(33)SRD5', 'memory': '3670016K/262144K', 'model': 'CISCO7606-S', 'serial': 'FOX1449GPSB', 'reloadreason': 'reload (SP by reload)'}]
+2016-11-20 12:44:33,727 INFO Login to 10.10.10.102 router 
+2016-11-20 12:44:41,935 WARNING Connection refused  error. 10.10.10.102: connection failed (10.10.10.102: child terminated "ssh: connect to host 10.10.10.102 port 22: Connection refused")
+2016-11-20 12:44:42,035 WARNING Connection got failed. Error msg Error.Connection refused error
+2016-11-20 12:46:45,627 INFO Login to 10.10.10.70 router 
+2016-11-20 12:46:52,939 INFO traceroute 10.10.10.104 Command output 
+Type escape sequence to abort.
+Tracing the route to 10.10.10.104
+
+  1 212.21.40.74 [MPLS: Label 294 Exp 0] 0 msec 4 msec 0 msec
+  2 212.21.51.7 0 msec *  0 msec
+ 
+2016-11-20 12:46:52,963 INFO Template Parsing Done
+2016-11-20 12:46:52,963 INFO [{'hopnum': '1', 'ipaddress': '212.21.40.74'}, {'hopnum': '2', 'ipaddress': '212.21.51.7'}]
+2016-11-20 12:51:29,996 INFO Login to 10.10.10.102 router 
+2016-11-20 12:51:38,204 WARNING Connection refused  error. 10.10.10.102: connection failed (10.10.10.102: child terminated "ssh: connect to host 10.10.10.102 port 22: Connection refused")
+2016-11-20 12:51:38,305 WARNING Connection got failed. Error msg Error.Connection refused error
+2016-11-20 14:30:07,222 INFO Login to 10.10.10.70 router 
+2016-11-20 14:30:14,534 INFO traceroute 10.10.10.104 Command output 
+Type escape sequence to abort.
+Tracing the route to 10.10.10.104
+
+  1 212.21.40.74 [MPLS: Label 294 Exp 0] 16 msec 0 msec 0 msec
+  2 212.21.51.7 0 msec *  0 msec
+ 
+2016-11-20 14:30:14,552 INFO Template Parsing Done
+2016-11-20 14:30:14,552 INFO [{'hopnum': '1', 'ipaddress': '212.21.40.74'}, {'hopnum': '2', 'ipaddress': '212.21.51.7'}]
+2016-11-20 16:55:00,926 INFO Login to 10.10.10.70 router 
+2016-11-20 16:55:46,772 INFO Login to 10.10.10.70 router 
+2016-11-20 16:56:47,039 INFO Login to 10.10.10.70 router 
+2016-11-20 16:56:54,351 INFO traceroute 10.10.10.104 Command output 
+Type escape sequence to abort.
+Tracing the route to 10.10.10.104
+
+  1 212.21.40.74 [MPLS: Label 294 Exp 0] 0 msec 0 msec 0 msec
+  2 212.21.51.7 4 msec *  0 msec
+ 
+2016-11-20 16:57:22,558 INFO Login to 10.10.10.70 router 
+2016-11-20 16:57:29,868 INFO traceroute 10.10.10.104 Command output 
+Type escape sequence to abort.
+Tracing the route to 10.10.10.104
+
+  1 212.21.40.74 [MPLS: Label 294 Exp 0] 0 msec 0 msec 0 msec
+  2 212.21.51.7 4 msec *  0 msec
+ 
+2016-11-20 16:58:28,267 INFO Login to 10.10.10.70 router 
+2016-11-20 16:58:35,576 INFO traceroute 10.10.10.104 Command output 
+Type escape sequence to abort.
+Tracing the route to 10.10.10.104
+
+  1 212.21.40.74 [MPLS: Label 294 Exp 0] 0 msec 0 msec 0 msec
+  2 212.21.51.7 4 msec *  0 msec
+ 
+2016-11-20 16:59:11,520 INFO Login to 10.10.10.70 router 
+2016-11-20 16:59:18,830 INFO traceroute 10.10.10.104 Command output 
+Type escape sequence to abort.
+Tracing the route to 10.10.10.104
+
+  1 212.21.40.74 [MPLS: Label 294 Exp 0] 0 msec 0 msec 0 msec
+  2 212.21.51.7 4 msec *  0 msec
+ 
