@@ -31,9 +31,10 @@ class RouterCommand:
 		    
     def Login(self):
             try:
-                routerHanlder=cling.Cling(hostname=self.routerIP,username= self.username,password=self.password,personality=self.personality,max_login_attempts=3,pexpect_timeout=200,pexpect_read_loop_timeout=0.5)
-                routerHanlder.login()
-                return routerHanlder
+                routerHandler=cling.Cling(hostname=self.routerIP,username= self.username,password=self.password,personality=self.personality,max_login_attempts=3,pexpect_timeout=200,pexpect_read_loop_timeout=0.5)
+                routerHandler.login()
+              #  print routerHandler
+                return routerHandler
             except Exception as e:
                 if "Authentication" in str(e):
                     msg="Error.Authentication failed"
@@ -42,7 +43,7 @@ class RouterCommand:
                 elif "refused" in str(e):
                     msg="Error.Connection refused error"
                 else:    
-                    msg='Error.Connecting to router '+hostName+' got failed. Error msg '+str(e)
+                    msg='Error.Connecting to router '+self.routerIP+' got failed. Error msg '+str(e)
                 return msg
 	    
     def executeCommand(self,routerHandler):
@@ -84,11 +85,11 @@ class RouterCommand:
             return "ErrorTemplate Parsing Failed"
 
     def gencmdoutput(self):
-#       cmdexec = RouterCommand(router,command,'madhan.endla','Srirama2498!')
+#       cmdexec = RouterCommand(router,command,'','')
         rHandler=self.Login()
         if "Error" in str(rHandler):
-            log.warning("Connection got failed. Error msg %s",str(rHandler))
-            return "conxn failed"
+            #log.warning("Connection got failed. Error msg %s",str(rHandler))
+            return "conxn failed"+str(rHandler)
         else:
             commandoutput=self.executeCommand(rHandler)
             templateOutput=self.parseOutput(commandoutput,"cisco_ios_show_version.template")
@@ -96,9 +97,9 @@ class RouterCommand:
 	
 	
 if __name__ == '__main__':
-     obj = RouterCommand('10.10.10.70','traceroute 10.10.10.102 source 212.21.50.254 numeric','madhan.endla','Srirama2498!')
+     obj = RouterCommand('10.10.10.68','traceroute 10.10.10.102 source 212.21.50.254 numeric','','')
      print obj.gencmdoutput()
-#    object=RouterCommand('10.10.10.70','sh version','madhan.endla','Srirama2498!')
+#    object=RouterCommand('10.10.10.70','sh version','','')
 #    rHandler=object.Login()
 #    if "Error" in str(rHandler):
 #	print "Error"
