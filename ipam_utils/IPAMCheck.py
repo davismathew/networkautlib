@@ -60,6 +60,7 @@ class IPAMCheck:
             try:
                 output=routerHandler.run_command(command)
 		#log.info("%s Command output %s ",str(command),str(output))
+		#print output
                 return output
             except Exception as e:
                 if "closed" in str(e):
@@ -109,10 +110,10 @@ class IPAMCheck:
 			    return "Exact",fullIP
 			else:
 			    return "Not",peAddress
-                    return peAddress
+                    return peAddress,""
             except Exception as e:
                     #log.warning('Exception occured while parsing \'%s\' command output : %s',str(command),str(output))
-                    return ""
+                    return "",""
         
         def parsingShowBgpAll(self,output,command):
             try:
@@ -164,7 +165,7 @@ class IPAMCheck:
 		    return vrfName
 	    except Exception as e:
 		#log.warning('Exception occured while parsing \'%s\' command output : %s',str(command),str(output))
-		return "ErrorParser"	
+		return ""	
 	    
         def checkSoureRouter(self,output,command):
                 try:
@@ -301,7 +302,10 @@ class IPAMCheck:
 						return " No exact match, match subnet is "+subnetip+". "+subnetip
 					    else:
 						#log.info("%s is  on Global routing table",str(ipvrf))
-						return  ipvrf+" is  on Global routing table"
+						if exact:
+						    return  ipvrf+" is  on Global routing table"
+						else:
+						    return ipvrf+" is free"
 					else:
 					    return ipvrf+" is free"					
 				    if str(lPrefix).strip() == str(ipvrf).strip():
@@ -352,10 +356,15 @@ class IPAMCheck:
 				    return " No exact match on Global routing table, match subnet is "+subnetip
 				else:
 				    #log.info("%s is  on Global routing table",str(ipvrf))
-				    return  ipvrf+" is  on Global routing table"
+				    if exact:
+					return  ipvrf+" is  on Global routing table"
+				    else:
+					return ipvrf+" is free"
+					
 			    else:
 				return ipvrf+" is free"
 	    except Exception as e:
+		print "error",str(e)
 		pass
 		#log.warning("Exception occured %s ",str(e))
 		    	        
@@ -363,5 +372,5 @@ class IPAMCheck:
 if __name__ == "__main__":
     object=IPAMCheck()
     #object.intializeLoggerModule('IPAMCheck.log','IPAMCheck')
-    lastIps=object.checkOnRouterandIPAM('10.10.10.70','172.16.23.0/29') 
+    lastIps=object.checkOnRouterandIPAM('10.10.10.70','200.12.220.98','','') 
     print lastIps
