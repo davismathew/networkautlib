@@ -45,8 +45,10 @@ class DB:
             if skip == 0:
                 SqlSelectQuery = "select INET_NTOA(subnet) from subnets where INET_NTOA(subnet)=\'"+str(value)+"\' and mask=\'"+str(mask)+"\'"
                 print SqlSelectQuery
-            else:
+            elif skip == 1:
                 SqlSelectQuery = "select INET_NTOA(subnet),mask from subnets where INET_NTOA(subnet)=\'"+str(value)+"\' ORDER BY mask DESC limit 1"
+            else:
+                SqlSelectQuery = "select INET_NTOA(subnet),mask from subnets where INET_NTOA(subnet) like \'"+str(value)+"%\'  and mask <> 32"
             connecTion = self.getConnection()
             lockQuery = " LOCK TABLES subnets READ"
             releaseLocks = " UNLOCK TABLES"

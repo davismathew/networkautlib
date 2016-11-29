@@ -15,6 +15,7 @@ from multiprocessing.dummy import Pool as ThreadPool
 import cling
 import re
 from netaddr import IPAddress,IPNetwork
+import ipaddr
 from DBCode import DB
 import ipcalc
 
@@ -60,7 +61,7 @@ class IPAMCheck:
             try:
                 output=routerHandler.run_command(command)
 		#log.info("%s Command output %s ",str(command),str(output))
-		#print output
+#		print output
                 return output
             except Exception as e:
                 if "closed" in str(e):
@@ -204,48 +205,86 @@ class IPAMCheck:
 		#log.info('Erro Occured on getSubnetModule')
 		return "Error",str(e)
 		    
-		
-	def checkOnRouterandIPAM(self,hostname,sourceIPs,username,password):
-	    subnetIP,subnet=self.getSubnet(sourceIPs)
-	    if "Error" in str(subnetIP):
-		#log.warning(" Error occured suring subnetting process.Error msg ",str(subnet))
-		return "Error occured during subnetting process.Error msg "+str(subnet)
-	    ipmaskSplit=str(subnetIP).split("/")
-	    shvrfIP=str(ipmaskSplit[0])
-	    ipSplit=str(ipmaskSplit[0]).split(".")
-	    firstLP=str(ipSplit[0])+"."+str(ipSplit[1])+"."+str(ipSplit[2])+"."	 
-	    fullIP=str(ipSplit[0])+"."+str(ipSplit[1])+"."+str(ipSplit[2])+"."+str(ipSplit[3])
-	    if int(ipmaskSplit[1]) == 32 :
-		routerCheck=self.checkIPAMIP(hostname,subnetIP,firstLP,fullIP,"Yes",username,password)
-	    else:
-		routerCheck=self.checkIPAMIP(hostname,subnetIP,firstLP,fullIP,"No",username,password)
-	    ipamCheck=self.db.selectRecord(fullIP,str(ipmaskSplit[1]))
-	    if ipamCheck == -1:
-		#log.info("%s and IPAM processing got failed ",str(routerCheck))
-		return " "+routerCheck+".\n IPAM check got failed"
-	    elif ipamCheck:
-		#log.info("%s and also available on New IPAM ",str(routerCheck))
-		print routerCheck+" and also available on New IPAM"
-		if "exact" in str(routerCheck).strip():
-		    return " "+routerCheck+".\n Avilable in  IPAM"
-		return " "+routerCheck+"\n Avilable in  IPAM"
-	    else:
-		ipamCheck=self.db.selectRecord(fullIP,str(ipmaskSplit[1]),1)
-		if ipamCheck == -1:
-		 #   log.info("%s and IPAM processing got failed ",str(routerCheck))
-		    return " "+routerCheck+".\n IPAM check got failed"	
-		elif ipamCheck:
-		    ip=""
-		    mask=""
-		    for values in ipamCheck:
-			ip=str(values[0])
-			mask=str(values[1])
-		    return " "+routerCheck+".\n No exact match and displaying Matching subnet "+str(ip)+"/"+str(mask)+" in IPAM"
-		else:
-		  #  log.info("%s and not on New IPAM ",str(routerCheck))
-		    print " "+routerCheck+".\n not on New IPAM"
-		    return " "+routerCheck+".\n not in IPAM"
+	def matchNearestSubnet(self,subnets,subnetIP):
+	    try:
+		first=0
+		ip=""
+		mask=""
+		macthSubnets=""
+		n1=ipaddr.IPNetwork(str(subnetIP).strip())
+		for i in subnets:
+		    matchSubnet=str(i[0]).strip()+"/"+str(i[1]).strip()
+		    n2=ipaddr.IPNetwork(str(matchSubnet).strip())
+		    if  n1.overlaps(n2):
+			if first == 0:
+			    ip=i[0]
+			    mask=i[1]
+			    macthSubnets=str(ip)+"/"+str(mask)
+			    first=1
+			else:
+			    if int(mask) < int(i[1]):
+				ip=i[0]
+				mask=i[1]
+				macthSubnets=str(ip)+"/"+str(mask)
+				first=1
+				
+		return macthSubnets		
+	    except Exception as e:
+		return "Error  "+str(e)
 	    
+	def checkOnRouterandIPAM(self,hostname,sourceIPs,username,password):
+	    try:
+		subnetIP,subnet=self.getSubnet(sourceIPs)
+		if "Error" in str(subnetIP):
+		    #log.warning(" Error occured suring subnetting process.Error msg ",str(subnet))
+		    return "Error occured during subnetting process.Error msg "+str(subnet)
+		ipmaskSplit=str(subnetIP).split("/")
+		shvrfIP=str(ipmaskSplit[0])
+		ipSplit=str(ipmaskSplit[0]).split(".")
+		firstLP=str(ipSplit[0])+"."+str(ipSplit[1])+"."+str(ipSplit[2])+"."	 
+		fullIP=str(ipSplit[0])+"."+str(ipSplit[1])+"."+str(ipSplit[2])+"."+str(ipSplit[3])
+		if int(ipmaskSplit[1]) == 32 :
+		    routerCheck=self.checkIPAMIP(hostname,subnetIP,firstLP,fullIP,"Yes",username,password)
+		else:
+		    routerCheck=self.checkIPAMIP(hostname,subnetIP,firstLP,fullIP,"No",username,password)
+		ipamCheck=self.db.selectRecord(fullIP,str(ipmaskSplit[1]))
+		if ipamCheck == -1:
+		    #log.info("%s and IPAM processing got failed ",str(routerCheck))
+		    return " "+routerCheck+".\n IPAM check got failed"
+		elif ipamCheck:
+		    #log.info("%s and also available on New IPAM ",str(routerCheck))
+		    print routerCheck+" and also available on New IPAM"
+		    if "exact" in str(routerCheck).strip():
+			return " "+routerCheck+".\n Avilable in  IPAM"
+		    return " "+routerCheck+"\n Avilable in  IPAM"
+		else:
+		    ipamCheck=self.db.selectRecord(fullIP,str(ipmaskSplit[1]),1)
+		    if ipamCheck == -1:
+		     #   log.info("%s and IPAM processing got failed ",str(routerCheck))
+			return " "+routerCheck+".\n IPAM check got failed"	
+		    elif ipamCheck:
+			ip=""
+			mask=""
+			for values in ipamCheck:
+			    ip=str(values[0])
+			    mask=str(values[1])
+			return " "+routerCheck+".\n No exact match and displaying Matching subnet "+str(ip)+"/"+str(mask)+" in IPAM"
+		    else:
+		      #  log.info("%s and not on New IPAM ",str(routerCheck))
+			ipamCheck=self.db.selectRecord(firstLP,str(ipmaskSplit[1]),2)
+			if ipamCheck == -1:
+			    return ""+str(routerCheck)+"\n IPAM check got failed "
+			elif ipamCheck:
+			    check=self.matchNearestSubnet(ipamCheck,subnetIP)
+			    if "Error" in str(check):
+				return ""+str(routerCheck)+"\n IPAM check got failed "
+			    elif check:
+				return ""+str(routerCheck)+"\n No exact match and diplaying Matching subnet "+str(check)+" in IPAM"
+			    else:
+				print " "+routerCheck+".\n not on New IPAM"
+				return " "+routerCheck+".\n not in IPAM"
+	    except Exception as e:
+		return str(e)
 	    
         def checkIPAMIP(self,hostname,sourceIPs,firstLP,fullIP,mask,username,password):
 	    Next=0
@@ -329,7 +368,7 @@ class IPAMCheck:
 						return "Match on Default Routing Table."
 					    return  " No exact Match on defaiulf VRF table. Match subnet is "+str(lPrefix)
 					else:
-					    log.info("%s IP  on %s VRF Routing Table",str(ipvrf),str(vrfName))
+					 #   log.info("%s IP  on %s VRF Routing Table",str(ipvrf),str(vrfName))
 					    if str(vrfExact) == 'Yes':
 						return "Match  on "+str(vrfName)+" vrf routing table."						    
 					    return  " No exact match  on "+str(vrfName)+" vrf routing table.Match subnet is "+str(lPrefix)	
@@ -372,5 +411,5 @@ class IPAMCheck:
 if __name__ == "__main__":
     object=IPAMCheck()
     #object.intializeLoggerModule('IPAMCheck.log','IPAMCheck')
-    lastIps=object.checkOnRouterandIPAM('10.10.10.70','200.12.220.98','','') 
+    lastIps=object.checkOnRouterandIPAM('10.10.10.70','10.10.10.244','','') 
     print lastIps
