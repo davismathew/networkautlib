@@ -61,7 +61,7 @@ class IPAMCheck:
             try:
                 output=routerHandler.run_command(command)
 		#log.info("%s Command output %s ",str(command),str(output))
-#		print output
+		print output
                 return output
             except Exception as e:
                 if "closed" in str(e):
@@ -268,7 +268,7 @@ class IPAMCheck:
 			for values in ipamCheck:
 			    ip=str(values[0])
 			    mask=str(values[1])
-			return " "+routerCheck+".\n No exact match and displaying Matching subnet "+str(ip)+"/"+str(mask)+" in IPAM"
+			return " "+routerCheck+".\n No Exact Match found, nearest matching subnet in IPAM is"+str(ip)+"/"+str(mask)
 		    else:
 		      #  log.info("%s and not on New IPAM ",str(routerCheck))
 			ipamCheck=self.db.selectRecord(firstLP,str(ipmaskSplit[1]),2)
@@ -279,7 +279,7 @@ class IPAMCheck:
 			    if "Error" in str(check):
 				return ""+str(routerCheck)+"\n IPAM check got failed "
 			    elif check:
-				return ""+str(routerCheck)+"\n No exact match and diplaying Matching subnet "+str(check)+" in IPAM"
+				return ""+str(routerCheck)+".\n No Exact Match found, nearest matching subnet in IPAM is"+str(check)
 			    else:
 				print " "+routerCheck+".\n not on New IPAM"
 				return " "+routerCheck+".\n not in IPAM"
@@ -338,7 +338,7 @@ class IPAMCheck:
 					    exact,subnetip=self.parsingShowIPRouter(output,ipvrf)
 					    if "Not" in str(exact):
 						#log.info("%s is  on Global routing table.But there is no exact match , match subnet is %s",str(ipvrf),str(subnetip))
-						return " No exact match, match subnet is "+subnetip+". "+subnetip
+						return " No Exact Match Found, nearest matching subnet is "+subnetip+" in global routing table"
 					    else:
 						#log.info("%s is  on Global routing table",str(ipvrf))
 						if exact:
@@ -366,12 +366,12 @@ class IPAMCheck:
 					#    log.info("%s IP on default VRF Routing Table",str(ipvrf))
 					    if str(vrfExact) == 'Yes':
 						return "Match on Default Routing Table."
-					    return  " No exact Match on defaiulf VRF table. Match subnet is "+str(lPrefix)
+					    return  " No Exact Match on defaiulf VRF table, nearest matching subnet is "+str(lPrefix)+" in routing table"
 					else:
 					 #   log.info("%s IP  on %s VRF Routing Table",str(ipvrf),str(vrfName))
 					    if str(vrfExact) == 'Yes':
 						return "Match  on "+str(vrfName)+" vrf routing table."						    
-					    return  " No exact match  on "+str(vrfName)+" vrf routing table.Match subnet is "+str(lPrefix)	
+					    return  " No Exact Match  on "+str(vrfName)+" vrf routing table, nearest  matching subnet is "+str(lPrefix)+" in routing table"	
 				    return rHandler
 				elif "No" in str(cRouter):
 				    PEAddress=self.parsingShowBgpAll(output,command)
@@ -384,7 +384,7 @@ class IPAMCheck:
 					#log.info("%s IP  on default VRF Routing Table",str(ipvrf))
 					if str(vrfExact) == 'Yes':
 						return "Match on Default Routing Table."
-					return  " No exact Match on defaulf VRF table. Match subnet is "+str(lPrefix)						
+					return  " No Exact Match on defaulf VRF table, nearest matching subnet is "+str(lPrefix)+" in routing table"						
 			else:
 			    command='sh ip route '+str(fullIP)
 			    output=self.runCommand(rHandler,command,hostname)
@@ -392,7 +392,7 @@ class IPAMCheck:
 				exact,subnetip=self.parsingShowIPRouter(output,ipvrf)
 				if "Not" in str(exact):
 				    #log.info("%s is  on Global routing table.But there is no exact match , match subnet is %s",str(ipvrf),str(subnetip))
-				    return " No exact match on Global routing table, match subnet is "+subnetip
+				    return " No Exact Match on Global routing table, nearest matching subnet is "+subnetip+" in routing table"
 				else:
 				    #log.info("%s is  on Global routing table",str(ipvrf))
 				    if exact:
