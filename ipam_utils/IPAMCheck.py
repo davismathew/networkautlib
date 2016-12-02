@@ -283,6 +283,9 @@ class IPAMCheck:
 			    else:
 				print " "+routerCheck+".\n not on New IPAM"
 				return " "+routerCheck+".\n not in IPAM"
+                        else:
+                            print " "+routerCheck+".\n not on New IPAM"
+                            return " "+routerCheck+".\n not in IPAM"        
 	    except Exception as e:
 		return str(e)
 	    
